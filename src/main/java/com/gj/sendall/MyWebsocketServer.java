@@ -19,8 +19,8 @@ public class MyWebsocketServer {
     /**
      * 存放所有在线的客户端
      */
-    private static Map<String, Session> clients = new ConcurrentHashMap<>();
-    private Gson gson = new Gson();
+    private final Map<String, Session> clients = new ConcurrentHashMap<>();
+    private final Gson gson = new Gson();
 
     @OnOpen
     public void onOpen(Session session) {
