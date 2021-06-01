@@ -20,9 +20,9 @@ public class MyOneToOneServer {
     /**
      * 用于存放所有在线客户端
      */
-    private static Map<String, Session> clients = new ConcurrentHashMap<>();
+    private final Map<String, Session> clients = new ConcurrentHashMap<>();
 
-    private Gson gson = new Gson();
+    private final Gson gson = new Gson();
 
     @OnOpen
     public void onOpen(Session session) {
